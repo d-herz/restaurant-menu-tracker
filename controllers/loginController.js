@@ -53,7 +53,7 @@ exports.postLogin = async ( req, res) => {
 
 //async again because talking to DB
 //for making a new user, first checks if email exists
-exports.postSignup = async ( req, res) => {
+exports.postSignup = async (req, res) => {
   let email = req.body.emailInput //from form
   let pass = req.body.pwdInput
 
