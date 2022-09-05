@@ -115,6 +115,3 @@ module.exports = {
 
 
 
-//North End Two Guys Pizza
-//https://shop-logos.imgix.net/shops/49080/original/north_and_two_guys.jpg?auto=compress,format
-//https://www.northtwoguyspizza.com/
