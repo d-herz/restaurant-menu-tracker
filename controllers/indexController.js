@@ -16,7 +16,7 @@ module.exports = {
 
   getSearch: async (req, res) => {
     let menu = schemas.menu  
-    let session = req.session
+    let session = req.session //session is a DB collection that stores session data
 
     let q = req.body.searchInput
     let menuData = null
