@@ -39,7 +39,6 @@ app.use(
 // app.use(passport.session())
 
 app.use(flash())
-
 app.use('/', indexRouter)
 app.use('/menu', menuRouter)
 app.use('/login', loginRouter)

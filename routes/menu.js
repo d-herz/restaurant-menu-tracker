@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-//add controllers
+const menuController = require('../controllers/menuController')
 // const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 
