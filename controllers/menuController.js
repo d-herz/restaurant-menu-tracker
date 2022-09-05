@@ -27,7 +27,7 @@ module.exports = {
           err = "Invalid ID"
         }
 
-        res.render('menu', {title: 'Edit Menu', loggedIn: session, error: err })
+        res.render('menu', {title:'Edit Menu', item:itemData, loggedIn:session.loggedIn, error:err});
       
       })
 
@@ -44,7 +44,7 @@ module.exports = {
       let menu = schemas.menu //menu schema from model
       let menuId = req.params.id
 
-      let qry = {_id:id}
+      let qry = {_id:menuId}
       let deleteResult = await menu.deleteOne(qry)
       res.redirect('/')
 
@@ -53,6 +53,8 @@ module.exports = {
   },
 
   saveMenu: async (req, res) => { //async for DB communication
+    let session = req.session
+
     if(!session.loggedIn){ //if NOT logged in, (same as deleteMenu)
       res.redirect('/login')
     } else {
@@ -110,3 +112,9 @@ module.exports = {
     }
   }
 }
+
+
+
+//North End Two Guys Pizza
+//https://shop-logos.imgix.net/shops/49080/original/north_and_two_guys.jpg?auto=compress,format
+//https://www.northtwoguyspizza.com/
