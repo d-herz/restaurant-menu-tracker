@@ -5,9 +5,7 @@ const indexController = require('../controllers/indexController')
 
 // const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
-
 router.get('/', indexController.getHomePage) //method in indexController should be named getHomePage
-
 router.post('/q', indexController.getSearch) // q is for query
 
 

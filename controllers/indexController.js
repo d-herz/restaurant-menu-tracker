@@ -5,7 +5,7 @@ const schemas = require('../models/schemas.js') //this is importing the 'mySchem
 
 module.exports = {
   getHomePage: async (req, res) => {
-    let menu = schemas.menu  //going inside the (imported) schemas object, and grabbing the menu propert
+    let menu = schemas.menu  //going inside the (imported) schemas object, and grabbing the menu property
     let session = req.session //session data
 
     let menuResult = await menu.find({})
@@ -17,7 +17,6 @@ module.exports = {
   getSearch: async (req, res) => {
     let menu = schemas.menu  
     let session = req.session //session is a DB collection that stores session data
-
     let q = req.body.searchInput
     let menuData = null
 
