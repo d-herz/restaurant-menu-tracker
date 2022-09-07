@@ -25,7 +25,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use(logger('dev')) //something from morgan (required above) which gives information about app and statuses etc..? 
+app.use(logger('dev')) //something from morgan (required above) which logs information about requests and statuses etc..
 
 // Sessions
 app.use(
@@ -48,7 +48,6 @@ app.use('/', indexRouter)
 app.use('/menu', menuRouter)
 app.use('/login', loginRouter)
 
-//add routes here
 // app.use('/', mainRoutes)
 // app.use('/todos', todoRoutes)
  
